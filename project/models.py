@@ -1,4 +1,4 @@
-from project import app, db
+from project import db
 import datetime
 
 class Book(db.Model):
@@ -42,6 +42,3 @@ class Log(db.Model):
     def __init__(self, client_id, book_id):
         self.client_id = client_id
         self.book_id = book_id
-
-with app.app_context():
-    db.create_all()

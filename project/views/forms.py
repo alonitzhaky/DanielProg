@@ -1,6 +1,4 @@
-from unicodedata import name
-from flask import Blueprint, render_template, abort
-from jinja2 import TemplateNotFound
+from flask import Blueprint, render_template
 from project import HOST_PORT
 from project import db
 from project.models import Client, Book, Log

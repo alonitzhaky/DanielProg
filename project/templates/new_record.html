@@ -14,7 +14,7 @@
 {% set att_arr = [['Client ID', 'number', 1, null], ['Book ID', 'number', 1, null]] %}
 {% endif %}
 
-<form action="{{host_port}}/{{adding}}/" method='POST'>
+<form action="/{{adding}}/" method='POST'>
 {% for att in att_arr %}
 <div class="mb-3">
     <label for="newRecord" class="form-label">{{att[0]}}</label>

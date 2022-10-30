@@ -11,12 +11,10 @@ def check_if_overdue():
         today = datetime.datetime.today()
         for log, book in arr:
             borrow_time = today - log.borrow_date
-            # print(borrow_time.days)
+            # book type dictates borrow days allowed before overdue: [1, 2, 3] : [10, 5, 2] respectively
             if (borrow_time.days > 10 and book.type == 1) or (borrow_time.days > 5 and book.type == 2) or (borrow_time.days > 2 and book.type == 3):
-                print('here')
                 log.overdue = True
         db.session.commit()
-        # return scheduler.print_jobs()
 
 #scheduling the job to run at 12am
 scheduler = BackgroundScheduler(timezone=str(tzlocal.get_localzone()))

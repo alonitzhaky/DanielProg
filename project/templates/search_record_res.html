@@ -48,7 +48,7 @@
 <script>
     // fetch request returns a response message from request method to ensure refresh occurs AFTER deletion
     function delete_record(record_id, idx) {
-        fetch(`{{host_port}}/{{searching}}/${record_id}`, { method: 'DELETE' }).then((response) => response.text()).then((text) => {
+        fetch(`/{{searching}}/${record_id}`, { method: 'DELETE' }).then((response) => response.text()).then((text) => {
             if (text == 'ok'){
                 window.location.reload()
             }

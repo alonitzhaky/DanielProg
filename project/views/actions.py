@@ -1,4 +1,3 @@
-from jinja2 import TemplateNotFound
 import datetime
 from project import db, HOST_PORT
 from flask import Blueprint, render_template, request, redirect

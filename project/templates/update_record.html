@@ -19,7 +19,7 @@
 <script>
     function update_record() {
         let id = document.getElementById("fname").value;
-        fetch(`{{host_port}}/log/${id}`, { method: 'PUT' }).then((response) => response.text()).then((text) => {
+        fetch(`/log/${id}`, { method: 'PUT' }).then((response) => response.text()).then((text) => {
             document.getElementById("err").innerText = text;
         });
     }
